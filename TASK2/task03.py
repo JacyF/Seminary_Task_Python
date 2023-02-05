@@ -10,10 +10,12 @@
 # 4 4 -> 2 2
 # 5 6 -> 2 3
 
-n1 = 0
+
 s = int(input("Whats the result of their summ ? ---> "))
 p = int(input("Whats the result of their multiplication ? ---> "))
-control = 0
+
+control = n1 = 0
+
 for i in range(1, p):
     if p / i == s - i:
         control += 1 
