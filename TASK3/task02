@@ -1,0 +1,26 @@
+# Требуется найти в массиве A[1..N] самый близкий по величине элемент к заданному числу X. 
+# Пользователь в первой строке вводит натуральное число N – количество элементов в массиве. 
+# В последующих строках записаны N целых чисел Ai. Последняя строка содержит число X.
+# Пример
+# 5
+# 1 2 3 4 5
+# 6
+# -> 5
+
+print(' NEXT TO YOU ')
+size = int(input('Introduce the size of matrix --> '))
+array = []
+for i in range(1, size+1):
+    elem = int(input(f'Introduce the {i} element --> '))
+    array.append(elem)
+print(array)
+
+num = int(input('Introduce a number to see whats the numbers next to him inserted in matrix : '))
+min = abs(min(array) - num)
+count = pos = 0
+
+for i in range(len(array)):
+    if abs(array[i] - num) <= min:
+        min = abs(array[i] - num)
+        pos = i
+print(f'the numbers next to {num} is {array[pos]}')
